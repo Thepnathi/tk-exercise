@@ -3,4 +3,3 @@ from core import models
 
 # Register your models here.
 admin.site.register(models.Artist)
-admin.site.register(models.Track)
