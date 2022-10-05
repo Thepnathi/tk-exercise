@@ -13,3 +13,8 @@ class ArtistSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'website', 'tracks']
         read_only_fields = ['id']
 
+class ArtistDetailSerializer(ArtistSerializer):
+    """Serializer for the artist detail"""
+
+    class Meta(ArtistSerializer.Meta):
+        fields = ArtistSerializer.Meta.fields + ['description']
