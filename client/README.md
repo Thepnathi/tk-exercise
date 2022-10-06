@@ -1,9 +1,15 @@
-# Artist
+# About this program
 
-- Show the artists list
-- Allow the user to create a new artist
-- Allow the user to edit an existing artist
-- Allow the user to delete an existing artist
+*Jordi owns a record store. His friend Emma suggested he modernise and create a very basic Django API to store all of his artists. He thought this sounded cool, but he had no idea what Django was, other than the Tarantino movie ‘Django Unchained’. He liked that movie.*
+
+*Jordi has decided to go to his good friend, you, to build him this initial API.*
+
+## The web app for Jordi
+*Whenever Jordi received new records she can update them through this site*
+
+## Images
+* TravelPerk
+* Unsplash - (credit Kevin McCutcheon) - https://unsplash.com/photos/TcSckNRL9J8
 
 # Getting Started with Create React App
 
