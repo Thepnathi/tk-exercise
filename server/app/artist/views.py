@@ -1,9 +1,9 @@
 """
 Views for the artist APIs
 """
-from rest_framework import viewsets
+from rest_framework import viewsets, mixins
 
-from core.models import Artist
+from core.models import Artist, Track
 from artist import serializer
 
 class ArtistViewSet(viewsets.ModelViewSet):
@@ -21,3 +21,15 @@ class ArtistViewSet(viewsets.ModelViewSet):
             return serializer.ArtistSerializer
 
         return self.serializer_class
+
+class TrackViewSet(mixins.DestroyModelMixin,
+                   mixins.UpdateModelMixin,
+                   mixins.ListModelMixin,
+                   viewsets.GenericViewSet):
+    """View for track"""
+    serializer_class = serializer.TrackSerializer
+    queryset = Track.objects.all()
+
+    def get_queryset(self):
+        """Retrieve tracks"""
+        return self.queryset.order_by('-title')
