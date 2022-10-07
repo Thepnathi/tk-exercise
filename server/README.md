@@ -108,3 +108,14 @@ Response:
 ```
 
 Notice that the old tracks are removed from the tracks field, and replaced with the data that was sent. That is to say, it is not additive, it is a replacement.
+
+
+## Running the API
+
+```
+docker-compose build
+docker-compose up
+docker-compose down
+docker-compose run --rm app sh -c "python manage.py test"
+docker-compose run --rm app sh -c "python manage.py managemigration"
+```

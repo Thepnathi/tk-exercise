@@ -13,6 +13,7 @@ from artist import views
 
 router = DefaultRouter()
 router.register('artist', views.ArtistViewSet)
+router.register('track', views.TrackViewSet)
 
 app_name = 'artist'
 
