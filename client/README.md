@@ -9,7 +9,7 @@
 
 ## Images
 * TravelPerk
-* Unsplash - (credit Kevin McCutcheon) - https://unsplash.com/photos/TcSckNRL9J8
+* Unsplash - (credit Kevin McCutcheon, @victrola) - https://unsplash.com/photos/TcSckNRL9J8, https://unsplash.com/photos/R4Rdi0EfBws
 
 # Getting Started with Create React App
 

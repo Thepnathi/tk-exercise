@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import {ThemeColour} from '../theme'
+import { ThemeColour } from '../theme'
 
 export type ArtistProps = {
     id: number
-    name: string
-    website: string
-    tracks: string[] | []
+    first_name: string
+    last_name: string
+    tracks: {
+        title: string
+    }[] | undefined
 }
 
 const ArtistContainer = styled.div`
@@ -17,13 +19,19 @@ const ArtistContainer = styled.div`
 `
 
 export const Artist = (artist: ArtistProps) => {
-    const allTracks = artist.tracks.join(', ')
+    const generateTracksConcat = () => {
+        let concatTracks = ''
+        artist.tracks?.forEach(track => {
+            concatTracks += `${track.title}, `
+        })
+        return concatTracks
+    }
 
     return (
         <ArtistContainer>
-            <h2>{artist.name}</h2>
-            <p>Website: {artist.website}</p>
-            <p>Tracks: {allTracks}</p>
+            <h2>{artist.first_name} {artist.last_name}</h2>
+            <p>{artist.tracks && artist.tracks.length > 0 ? 'Track: ' + generateTracksConcat() :
+            'There are currently no tracks'}</p>
         </ArtistContainer>
     )
 }
