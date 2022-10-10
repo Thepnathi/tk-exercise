@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import PlaceHolderImage from '../assets/record_player.jpg'
+import PlaceHolderImage from '../../assets/record_player.jpg'
 
 export type CardProps = {
     image?: string

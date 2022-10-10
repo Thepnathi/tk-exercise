@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-import { ThemeColour } from '../theme'
+import { ThemeColour } from '../../theme'
 
 export type ArtistProps = {
     id: number
@@ -18,7 +18,7 @@ const ArtistContainer = styled.div`
     }
 `
 
-export const Artist = (artist: ArtistProps) => {
+export const ArtistBlock = (artist: ArtistProps) => {
     const generateTracksConcat = () => {
         let concatTracks = ''
         artist.tracks?.forEach(track => {

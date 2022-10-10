@@ -1,16 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import { ThemeColour } from '../theme/Theme'
+import { ThemeColour } from '../../theme/Theme';
 
-type PlatformType = 'Success' | 'Failure'
+type PlatformType = 'Success' | 'Failure';
 
 export type PlatformMessageProps = {
     messageContent: string | JSX.Element
-    type: PlatformType
+    type?: PlatformType
 }
 
-const PlatformMessageContainer = styled.div<{type: PlatformType}>`
+const PlatformMessageContainer = styled.div<{type?: PlatformType}>`
     height: 50px;
     width: 300px;
     border-radius: 6px;
