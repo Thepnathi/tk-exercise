@@ -14,6 +14,21 @@ Jordi wants to be able to store 2 models, which you can see on the right. He onl
 4. Edit the tracks of an artist, where it will fully replace the tracks (see example)
 5. Delete an artist
 
+## Running the API
+
+```javascript
+
+docker-compose build
+// Run the API
+docker-compose up
+docker-compose down
+// Run the test
+docker-compose run --rm app sh -c "python manage.py test"
+docker-compose run --rm app sh -c "python manage.py managemigration"
+```
+
+You can test the API on here: http://localhost:8000/api/docs/
+
 See the examples for more specific help
 
 <aside>
@@ -109,13 +124,3 @@ Response:
 
 Notice that the old tracks are removed from the tracks field, and replaced with the data that was sent. That is to say, it is not additive, it is a replacement.
 
-
-## Running the API
-
-```
-docker-compose build
-docker-compose up
-docker-compose down
-docker-compose run --rm app sh -c "python manage.py test"
-docker-compose run --rm app sh -c "python manage.py managemigration"
-```
